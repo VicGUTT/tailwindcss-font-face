@@ -1,0 +1,111 @@
+{
+    "name": "@vicgutt/tailwindcss-font-face",
+    "version": "0.0.0",
+    "description": "An easy way to configure your project's font faces within TailwindCSS",
+    "author": "Victor GUTT <guttvictor@yahoo.fr> (https://victorgutt.dev)",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "keywords": [
+        "tailwindcss",
+        "tailwind",
+        "tailwind-plugin",
+        "plugin",
+        "font-face",
+        "font",
+        "typography"
+    ],
+    "scripts": {
+        "start": "tsdx watch",
+        "watch": "tsdx watch",
+        "build": "tsdx build",
+        "prod": "tsdx build",
+        "prepare": "tsdx build",
+        "------------------------------------- | TEST | -------------------------------------": "",
+        "test": "tsdx test",
+        "test:clear": "tsdx test --clearCache",
+        "test:watch": "tsdx test --watch",
+        "test:watch:parsers": "tsdx test --watch --testPathPattern=parsers/*",
+        "test:watch:handler": "tsdx test --watch --testPathPattern=Handler.test.ts",
+        "test:watch:index": "tsdx test --watch --testPathPattern=index.test.ts",
+        "test:coverage": "tsdx test --coverage",
+        "------------------------------------- | LINT | -------------------------------------": "",
+        "lint": "tsdx lint",
+        "fix": "tsdx lint --fix",
+        "fix:src": "tsdx lint src --fix",
+        "fix:tests": "tsdx lint tests --fix",
+        "------------------------------------- | PUBL | -------------------------------------": "",
+        "release": "np --no-tests",
+        "release:preview": "np --no-tests --preview",
+        "------------------------------------- | MISC | -------------------------------------": "",
+        "size": "size-limit",
+        "analyze": "size-limit --why"
+    },
+    "devDependencies": {
+        "@size-limit/preset-small-lib": "^4.12.0",
+        "@types/tailwindcss": "^2.0.6",
+        "husky": "^6.0.0",
+        "jest-matcher-css": "^1.1.0",
+        "np": "^7.5.0",
+        "postcss": "^8.3.5",
+        "size-limit": "^4.12.0",
+        "tsdx": "^0.14.1",
+        "tslib": "^2.3.0",
+        "typescript": "^4.3.4"
+    },
+    "dependencies": {
+        "sync-request": "^6.1.0",
+        "tailwindcss": "^2.2.2"
+    },
+    "peerDependencies": {},
+    "files": [
+        "dist",
+        "src"
+    ],
+    "engines": {
+        "node": ">=14"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VicGUTT/tailwindcss-font-face.git"
+    },
+    "bugs": {
+        "url": "https://github.com/VicGUTT/tailwindcss-font-face/issues"
+    },
+    "homepage": "https://github.com/VicGUTT/tailwindcss-font-face#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "tsdx lint"
+        }
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "as-needed": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf"
+    },
+    "module": "dist/tailwindcss-font-face.esm.js",
+    "size-limit": [
+        {
+            "path": "dist/tailwindcss-font-face.cjs.production.min.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/tailwindcss-font-face.esm.js",
+            "limit": "10 KB"
+        }
+    ],
+    "np": {
+        "yarn": false,
+        "contents": "dist",
+        "publishConfig": {
+            "access": "public"
+        }
+    }
+}
