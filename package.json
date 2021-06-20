@@ -1,6 +1,6 @@
 {
     "name": "@vicgutt/tailwindcss-font-face",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "An easy way to configure your project's font faces within TailwindCSS",
     "author": "Victor GUTT <guttvictor@yahoo.fr> (https://victorgutt.dev)",
     "license": "MIT",
